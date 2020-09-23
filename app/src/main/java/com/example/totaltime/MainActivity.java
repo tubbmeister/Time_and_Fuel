@@ -69,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
         //EditText Attempt = findViewById(R.id.numberEntry);
         TextView Result= findViewById(R.id.TotalMinutesView);
         String tester=numberEntry.getText().toString();
+        TextView firstHour = findViewById(R.id.hours1);
+        TextView firstMinute = findViewById(R.id.minutes1);
+        TextView firstHour2 = findViewById(R.id.hours2);
+        TextView firstMinute2 = findViewById(R.id.minutes2);
+        TextView finalHours = findViewById(R.id.TotalHoursView);
+        TextView finalMinutes = findViewById(R.id.TotalMinutesView);
         if (tester.matches("")){
             return; //checks that there is data in the field
         }
@@ -81,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
            // Answer.setText("Wrong, the correct answer was: " + (value1+value2));
         }
+        if (i>2) {firstHour.setText("");
+                    firstMinute.setText("");
+                    firstHour2.setText("");
+                    firstMinute2.setText("");
+                    finalHours.setText("");
+                    finalMinutes.setText("");
+            i=0;}
         if(i==0) {
             first=userAnswer;
             String xHour = numberEntry.getText().toString();
@@ -93,8 +106,7 @@ public class MainActivity extends AppCompatActivity {
                  return;
              }
 
-            TextView firstHour = findViewById(R.id.hours1);
-            TextView firstMinute = findViewById(R.id.minutes1);
+
             int infrontOfDecimal = ((int)first); // remove numbers after decimal
             double FirstHours=infrontOfDecimal; //convert to double
 
@@ -114,11 +126,11 @@ public class MainActivity extends AppCompatActivity {
             else {
                 firstMinute.setText(String.valueOf(minuteFirstFromString));// show first hours
             }
+            i++;
         } else {
             second=userAnswer;
 
-            TextView firstHour = findViewById(R.id.hours2);
-            TextView firstMinute = findViewById(R.id.minutes2);
+
 
 
             String xHour = numberEntry.getText().toString();
@@ -132,13 +144,13 @@ public class MainActivity extends AppCompatActivity {
          //   TextView secondNumber = findViewById(R.id.hours2);
             String stringdouble= Double.toString(userAnswer);
         //    secondNumber.setText(stringdouble);
-            firstHour.setText(String.valueOf(hourFirstFromString1)+" :");
+            firstHour2.setText(String.valueOf(hourFirstFromString1)+" :");
 
             if (minuteFirstFromString1 <10){
-                firstMinute.setText(String.valueOf("0"+minuteFirstFromString1));// show first hours
+                firstMinute2.setText(String.valueOf("0"+minuteFirstFromString1));// show first hours
             }
             else {
-                firstMinute.setText(String.valueOf(minuteFirstFromString1));// show first hours
+                firstMinute2.setText(String.valueOf(minuteFirstFromString1));// show first hours
                 // firstMinute.setText(String.valueOf(minuteFirstFromString1));// show first hours
             }
 
@@ -150,12 +162,12 @@ public class MainActivity extends AppCompatActivity {
                 remainingMinutes = (remainingMinutes * 60);
                 int a = (int) Math.round(remainingMinutes);
                 // Answer.setText(String.valueOf(a));
-                TextView finalHours = findViewById(R.id.TotalHoursView);
+
                 int b = (int) addHour + hourFirstFromString + hourFirstFromString1;
                 finalHours.setText(String.valueOf(b) + " :");
                 TextView results=findViewById(R.id.resultView);
                  results.setVisibility(View.VISIBLE);
-                TextView finalMinutes = findViewById(R.id.TotalMinutesView);
+
                 if (a < 10) {
                     finalMinutes.setText(String.valueOf("0" + a));
                 } else {
@@ -183,8 +195,7 @@ public class MainActivity extends AppCompatActivity {
        // finalResult.setText(stringdouble1);
 
 
-        if (i>1) {
-            i=0;}
+
         }
 
 
