@@ -103,11 +103,13 @@ public class MainActivity extends AppCompatActivity {
            int IntFirstHour = (int)FirstHours; //convert double to int for display
             int IntFirstMinute = (int)FirstMinutes; //convert double to int for display
             firstHour.setText(String.valueOf(IntFirstHour));
+            numberEntry.requestFocus();
 
             firstHour.setText(String.valueOf(hourFirstFromString)+" :");
 
             if (minuteFirstFromString <10){
                 firstMinute.setText(String.valueOf("0"+minuteFirstFromString));// show first hours
+
             }
             else {
                 firstMinute.setText(String.valueOf(minuteFirstFromString));// show first hours

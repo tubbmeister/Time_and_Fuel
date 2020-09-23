@@ -118,30 +118,36 @@
 
     <TableLayout
         android:id="@+id/simpleTableLayout"
-        android:layout_width="wrap_content"
+
+        android:measureWithLargestChild="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+
         android:stretchColumns="*"
-        android:shrinkColumns="*"
-        app:layout_constraintTop_toBottomOf="@+id/hours2"
-        tools:layout_editor_absoluteX="-1dp"> <!-- stretch the second column of the layout-->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hours2"> <!-- stretch the second column of the layout-->
 
         <!-- first row of the table layout-->
         <TableRow
             android:id="@+id/firstRow"
+            android:weightSum="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#87A662"
-            android:padding="5dp">
+            android:padding="1dp"
+            android:gravity="center">
 
             <!-- first element of the row-->
             <TextView
                 android:id="@+id/resultView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="140dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+
                 android:text="TOTAL"
+
+                android:textAlignment="center"
                 android:textColor="#0E0E0E"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -153,20 +159,21 @@
         <TableRow
 
             android:id="@+id/firstRow1"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#99A1A8"
-            android:padding="5dp"
-            android:gravity="center">
+
+            android:padding="1dp">
 
             <TextView
                 android:id="@+id/TotalHoursView"
-                android:layout_width="20dp"
+                android:layout_width="match_parent"
 
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_column="0"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
+                android:layout_marginStart="1dp"
+                android:layout_weight="0"
                 android:textAlignment="textEnd"
                 android:textColor="#0B0A0A"
                 android:textSize="30sp"
@@ -174,12 +181,11 @@
 
             <TextView
                 android:id="@+id/TotalMinutesView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_column="1"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginStart="1dp"
+                android:layout_weight="0"
                 android:textColor="#0B0A0A"
                 android:textSize="30sp"
                 android:textStyle="bold" />
