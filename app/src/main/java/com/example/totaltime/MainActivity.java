@@ -127,6 +127,10 @@ public class MainActivity extends AppCompatActivity {
                 firstMinute.setText(String.valueOf(minuteFirstFromString));// show first hours
             }
             i++;
+
+            numberEntry.requestFocus();
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(numberEntry, InputMethodManager.SHOW_FORCED); //keeps keyboard visible
         } else {
             second=userAnswer;
 
@@ -174,7 +178,11 @@ public class MainActivity extends AppCompatActivity {
                     finalMinutes.setText(String.valueOf(a));
                 }
 
+            InputMethodManager inputManager = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
 
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //deletes keyboard
 
 
         }
