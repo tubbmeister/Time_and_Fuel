@@ -87,7 +87,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:height="0dp"
-                android:hint="Total Fuel"
+                android:hint="Fuel in Tanks"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="21sp"
@@ -106,7 +106,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:ems="0"
-                android:hint="Total Required"
+                android:hint="Fuel Needed (kg)"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="21sp"
@@ -116,11 +116,20 @@
                 android:id="@+id/Temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.25"
+                android:layout_weight="0"
                 android:ems="0"
-                android:hint="Temperature"
+                android:hint="Temp "
                 android:inputType="number"
                 android:textAlignment="center"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/SpecificGravity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:inputType="number"
                 android:textSize="21sp"
                 android:textStyle="bold" />
         </TableRow>

@@ -67,6 +67,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         EditText ActualLitres = findViewById(R.id.ActualLitres);
         EditText Temperature = findViewById(R.id.Temperature);
         EditText ExpectedLitres = findViewById(R.id.ExpectedLitres);
+        EditText SpecificGravity = findViewById(R.id.SpecificGravity);
 
         String LeftTankString=LeftTank.getText().toString();
         if(TextUtils.isEmpty(LeftTankString)) {
@@ -92,8 +93,8 @@ public class DisplayMessageActivity extends AppCompatActivity {
        // RightTank.setText("24");
 
         //test.setText("Hello");
-        test.setText(String.valueOf(DoSums));
-        TankTotal.setText(String.valueOf(DoSums));
+       // test.setText(String.valueOf(DoSums));
+        TankTotal.setText(String.valueOf(DoSums)+" kg");
 
 
 
@@ -132,6 +133,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
             int output=(int) Math.round(fuelcalculation);
             ExpectedLitres.setText(String.valueOf(output));
             String TotalActualLitresString=ActualLitres.getText().toString();
+            SpecificGravity.setText(String.valueOf(Temperature1)+" SG");
 
         if(TextUtils.isEmpty(TotalActualLitresString)) {
             //RequiredFuel.setError("Add Total!");
@@ -141,6 +143,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
             int actualLitres1=(Integer.parseInt(TotalActualLitresString));
             int ActualDifference=(actualLitres1-output);
             test.setText((String.valueOf(ActualDifference))+" litre difference.");
+
 
             InputMethodManager inputManager = (InputMethodManager)
                     getSystemService(Context.INPUT_METHOD_SERVICE);
