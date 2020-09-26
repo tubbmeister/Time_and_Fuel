@@ -20,7 +20,7 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="395dp"
+        android:layout_width="0dp"
         android:layout_height="286dp"
         android:layout_marginStart="1dp"
 
@@ -46,7 +46,7 @@
                 android:hint="Left Tank"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -59,7 +59,7 @@
                 android:hint="Center Tank"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -72,7 +72,7 @@
                 android:hint="Right Tank"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -90,7 +90,7 @@
                 android:hint="Total Fuel"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -109,7 +109,7 @@
                 android:hint="Total Required"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -121,7 +121,7 @@
                 android:hint="Temperature"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -139,7 +139,7 @@
                 android:hint="Expected Litres"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -151,7 +151,7 @@
                 android:hint="Actual Litres"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -170,7 +170,7 @@
                 android:ems="0"
                 android:hint="Difference"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
         </TableRow>
     </TableLayout>
