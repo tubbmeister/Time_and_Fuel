@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Time Calculator</string>
+    <string name="app_name">Time and Fuel</string>
     <string name="edit_message">Enter a Message</string>
     <string name="button_send">SEND</string>
 </resources>

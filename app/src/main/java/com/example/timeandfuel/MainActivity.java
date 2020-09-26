@@ -1,4 +1,4 @@
-package com.example.totaltime;
+package com.example.timeandfuel;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.example.totaltime;
+package com.example.timeandfuel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,4 +22,5 @@ public class DisplayMessageActivity extends AppCompatActivity {
         textView2.setText(message);
 
     }
+
 }
