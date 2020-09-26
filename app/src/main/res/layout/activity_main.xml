@@ -142,7 +142,7 @@
             android:weightSum="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#B30E46"
+            android:background="#BA2015"
             android:padding="1dp"
             android:gravity="center">
 
