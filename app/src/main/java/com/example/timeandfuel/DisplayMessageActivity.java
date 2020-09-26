@@ -2,11 +2,13 @@ package com.example.timeandfuel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -93,6 +95,8 @@ public class DisplayMessageActivity extends AppCompatActivity {
         test.setText(String.valueOf(DoSums));
         TankTotal.setText(String.valueOf(DoSums));
 
+
+
        // if(RequiredFuel)
         String TotalRequiredString=RequiredFuel.getText().toString();
         String TemperatureString=Temperature.getText().toString();
@@ -136,9 +140,16 @@ public class DisplayMessageActivity extends AppCompatActivity {
         else {
             int actualLitres1=(Integer.parseInt(TotalActualLitresString));
             int ActualDifference=(actualLitres1-output);
-            test.setText((String.valueOf(ActualDifference)));
+            test.setText((String.valueOf(ActualDifference))+" litre difference.");
+
+            InputMethodManager inputManager = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+
+            inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
+
                 if (ActualDifference>625 || ActualDifference<-625){
-                    test.setText((String.valueOf(ActualDifference))+"litre  Discrepancy!");
+                    test.setText((String.valueOf(ActualDifference))+" litre  Discrepancy!");
                     test.setTextColor(Color.RED);
                 }
         }

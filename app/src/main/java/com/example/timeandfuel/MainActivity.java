@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -102,7 +103,12 @@ public class MainActivity extends AppCompatActivity {
              minuteFirstFromString = Integer.parseInt(separated[1]);
 
              if (minuteFirstFromString>59){
-                numberEntry.setText("CHECK MINUTES!"); //capture error
+                //numberEntry.setText("CHECK MINUTES!"); //capture error
+
+                     numberEntry.setError("Check Minutes!");
+
+
+
                  return;
              }
 
@@ -142,7 +148,8 @@ public class MainActivity extends AppCompatActivity {
              hourFirstFromString1 = Integer.parseInt(separated[0]);
              minuteFirstFromString1 = Integer.parseInt(separated[1]);
             if (minuteFirstFromString1>59){
-                numberEntry.setText("CHECK MINUTES!"); //capture error
+               //23 numberEntry.setText("CHECK MINUTES!"); //capture error
+                numberEntry.setError("Check Minutes!");
                 return;
             }
          //   TextView secondNumber = findViewById(R.id.hours2);

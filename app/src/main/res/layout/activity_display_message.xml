@@ -183,6 +183,7 @@
         android:layout_marginTop="16dp"
         android:onClick="ButtonTest"
         android:text="Calculate"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -193,6 +194,7 @@
         android:layout_marginTop="40dp"
         android:onClick="ButtonTest"
         android:text="Button"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
