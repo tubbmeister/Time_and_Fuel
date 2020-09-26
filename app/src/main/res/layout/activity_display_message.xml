@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RequiredFuel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="0.25"
@@ -9,8 +10,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="256dp"
-        android:layout_height="66dp"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,12 +19,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="395dp"
         android:layout_height="286dp"
         android:layout_marginStart="1dp"
+
+
         android:layout_marginTop="24dp"
-
-
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +37,7 @@
             android:layout_weight="1">
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/LeftTank"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
@@ -43,10 +45,12 @@
 
                 android:hint="Left Tank"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/CentreTank"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
@@ -54,10 +58,12 @@
 
                 android:hint="Center Tank"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/RightTank"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
@@ -65,7 +71,9 @@
 
                 android:hint="Right Tank"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -74,33 +82,17 @@
             android:layout_weight="1">
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                android:height="0dp"
-                android:inputType="number"
-                android:textAlignment="center" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/TankTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:height="0dp"
                 android:hint="Total Fuel"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                android:height="0dp"
-
-                android:inputType="number"
-                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -109,24 +101,28 @@
             android:layout_weight="1">
 
             <EditText
-                android:id="@+id/editTextTextPersonName9"
+                android:id="@+id/NeededFuel"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:ems="0"
                 android:hint="Total Required"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName8"
+                android:id="@+id/Temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:ems="0"
                 android:hint="Temperature"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -135,51 +131,68 @@
             android:layout_weight="1">
 
             <EditText
-                android:id="@+id/editTextTextPersonName11"
+                android:id="@+id/ExpectedLitres"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:ems="0"
                 android:hint="Expected Litres"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName10"
+                android:id="@+id/ActualLitres"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:ems="0"
                 android:hint="Actual Litres"
                 android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:gravity="center">
 
-            <EditText
+            <TextView
                 android:id="@+id/DifferenceText"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:layout_weight="0.25"
                 android:ems="0"
                 android:hint="Difference"
-                android:inputType="number"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </TableRow>
     </TableLayout>
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="219dp"
+        android:layout_height="66dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:onClick="ButtonTest"
         android:text="Calculate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="ButtonTest"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
