@@ -12,9 +12,20 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class DisplayMessageActivity extends AppCompatActivity {
+public class DisplayMessageActivity extends AppCompatActivity implements View.OnClickListener {
 
     int DoSums,i=0;
+    TextView test;
+    EditText LeftTank;
+    EditText CentreTank;
+    EditText RightTank;
+    EditText TankTotal;
+    EditText NeededFuel;
+    EditText ActualLitres;
+    EditText Temperature;
+    EditText ExpectedLitres;
+    EditText SpecificGravity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +39,57 @@ public class DisplayMessageActivity extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
         TextView textView2 = findViewById(R.id.textView2);
         textView2.setText(message);
-
+         test = findViewById(R.id.DifferenceText);
+         LeftTank = findViewById(R.id.LeftTank);
+        CentreTank = findViewById(R.id.CentreTank);
+        RightTank = findViewById(R.id.RightTank);
+        TankTotal = findViewById(R.id.TankTotal);
+        NeededFuel = findViewById(R.id.NeededFuel);
+        ActualLitres = findViewById(R.id.ActualLitres);
+        Temperature = findViewById(R.id.Temperature);
+        ExpectedLitres = findViewById(R.id.ExpectedLitres);
+        SpecificGravity = findViewById(R.id.SpecificGravity);
+        LeftTank.setOnClickListener(this);
+        CentreTank.setOnClickListener(this);
+        RightTank.setOnClickListener(this);
+        NeededFuel.setOnClickListener(this);
+        ActualLitres.setOnClickListener(this);
+        Temperature.setOnClickListener(this);
     }
 
 
-    public void DoCalculation (View view) {
-        EditText LeftTank = findViewById(R.id.LeftTank);
-        EditText CentreTank = findViewById(R.id.CentreTank);
-        EditText RightTank = findViewById(R.id.RightTank);
-        EditText TankTotal = findViewById(R.id.TankTotal);
-        EditText RequiredFuel = findViewById(R.id.NeededFuel);
-        EditText ActualLitres = findViewById(R.id.ActualLitres);
-        EditText Temperature = findViewById(R.id.Temperature);
-        EditText ExpectedLitres = findViewById(R.id.ExpectedLitres);
+        public void onClick(View v) {
+            switch (v.getId()) {
 
-        TextView Difference = findViewById(R.id.DifferenceText);
+                case R.id.LeftTank:
+                    LeftTank.getText().clear(); //or you can use editText.setText("");
+                    break;
+                case    R.id.CentreTank:
+                    CentreTank.getText().clear(); //or you can use editText.setText("");
+                    break;
+                case     R.id.RightTank:
+                    RightTank.getText().clear(); //or you can use editText.setText("");
+                    break;
+                case R.id.NeededFuel:  //must be same as id above!
+                    NeededFuel.getText().clear(); //or you can use editText.setText("");
+                    break;
+                case R.id.ActualLitres:
+                    ActualLitres.getText().clear(); //or you can use editText.setText("");
+                    break;
+                 case R.id.Temperature:
+                     Temperature.getText().clear(); //or you can use editText.setText("");
+                     break;
+            }
+
+        }
+
+
+
+
+
+
+    public void DoCalculation (View view) {
+
 
 
 
@@ -58,16 +105,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
     public void ButtonTest(View view){
 
-        TextView test=findViewById(R.id.DifferenceText);
-        EditText LeftTank = findViewById(R.id.LeftTank);
-        EditText CentreTank = findViewById(R.id.CentreTank);
-        EditText RightTank = findViewById(R.id.RightTank);
-        EditText TankTotal = findViewById(R.id.TankTotal);
-        EditText RequiredFuel = findViewById(R.id.NeededFuel);
-        EditText ActualLitres = findViewById(R.id.ActualLitres);
-        EditText Temperature = findViewById(R.id.Temperature);
-        EditText ExpectedLitres = findViewById(R.id.ExpectedLitres);
-        EditText SpecificGravity = findViewById(R.id.SpecificGravity);
+
 
         String LeftTankString=LeftTank.getText().toString();
         if(TextUtils.isEmpty(LeftTankString)) {
@@ -99,7 +137,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
 
        // if(RequiredFuel)
-        String TotalRequiredString=RequiredFuel.getText().toString();
+        String TotalRequiredString=NeededFuel.getText().toString();
         String TemperatureString=Temperature.getText().toString();
 
         if(TextUtils.isEmpty(TotalRequiredString)) {
@@ -111,7 +149,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
             return;
         }
 
-        int FuelNeededTotal1=(Integer.parseInt(RequiredFuel.getText().toString()));
+        int FuelNeededTotal1=(Integer.parseInt(NeededFuel.getText().toString()));
         double Temperature1=(Integer.parseInt(Temperature.getText().toString()));
 
         if(Temperature1<5){
