@@ -25,6 +25,7 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
     EditText Temperature;
     EditText ExpectedLitres;
     EditText SpecificGravity;
+    EditText CalcUplift;
 
 
     @Override
@@ -47,6 +48,7 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
         NeededFuel = findViewById(R.id.NeededFuel);
         ActualLitres = findViewById(R.id.ActualLitres);
         Temperature = findViewById(R.id.Temperature);
+        CalcUplift = findViewById(R.id.CalcUplift);
         ExpectedLitres = findViewById(R.id.ExpectedLitres);
         SpecificGravity = findViewById(R.id.SpecificGravity);
         LeftTank.setOnClickListener(this);
@@ -55,6 +57,7 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
         NeededFuel.setOnClickListener(this);
         ActualLitres.setOnClickListener(this);
         Temperature.setOnClickListener(this);
+        //CalcUplift.setOnClickListener(this);
     }
 
 
@@ -168,8 +171,10 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
 
         }
         double fuelcalculation=((FuelNeededTotal1-DoSums)/Temperature1);
+            int calcFuel=(FuelNeededTotal1-DoSums);
+            CalcUplift.setText((String.valueOf(calcFuel))+" kg");
             int output=(int) Math.round(fuelcalculation);
-            ExpectedLitres.setText(String.valueOf(output));
+            ExpectedLitres.setText((String.valueOf(output))+" ltr");
             String TotalActualLitresString=ActualLitres.getText().toString();
             SpecificGravity.setText(String.valueOf(Temperature1)+" SG");
 

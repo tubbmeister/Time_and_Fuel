@@ -38,7 +38,7 @@
 
             <EditText
                 android:id="@+id/LeftTank"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:height="0dp"
@@ -52,7 +52,7 @@
 
             <EditText
                 android:id="@+id/CentreTank"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:height="0dp"
@@ -65,7 +65,7 @@
 
             <EditText
                 android:id="@+id/RightTank"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:height="0dp"
@@ -103,11 +103,11 @@
 
             <EditText
                 android:id="@+id/NeededFuel"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
-                android:ems="0"
-                android:hint="OFP Fuel (kg)"
+
+                android:hint="OFP Fuel "
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="21sp"
@@ -115,10 +115,10 @@
 
             <EditText
                 android:id="@+id/Temperature"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:ems="0"
+                android:layout_weight="0.25"
+
                 android:hint="Temp "
                 android:inputType="number"
                 android:textAlignment="center"
@@ -127,9 +127,9 @@
 
             <EditText
                 android:id="@+id/SpecificGravity"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0"
+                android:layout_weight="0.25"
                 android:inputType="number"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -141,12 +141,24 @@
             android:layout_weight="1">
 
             <EditText
+                android:id="@+id/CalcUplift"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:ems="10"
+                android:hint="Calc Uplift"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <EditText
                 android:id="@+id/ExpectedLitres"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:ems="0"
-                android:hint="Expected Litres"
+                android:hint="Uplift Req"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="21sp"
@@ -154,11 +166,11 @@
 
             <EditText
                 android:id="@+id/ActualLitres"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:ems="0"
-                android:hint="Actual Litres"
+                android:hint="Actual Ltr"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="21sp"
