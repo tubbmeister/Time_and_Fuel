@@ -39,7 +39,7 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
 
         // Capture the layout's TextView and set the string as its text
         TextView textView2 = findViewById(R.id.textView2);
-        textView2.setText(message);
+        //textView2.setText(message);
          test = findViewById(R.id.DifferenceText);
          LeftTank = findViewById(R.id.LeftTank);
         CentreTank = findViewById(R.id.CentreTank);
